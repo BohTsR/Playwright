@@ -35,3 +35,6 @@ To get started:
 2.  **Install Dependencies**
     ```bash
     npm install
+3.  **Run tests**
+    ```bash
+    npx playwright test
