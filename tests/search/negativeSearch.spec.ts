@@ -16,7 +16,7 @@ test('Negative search', async({browser}) => {
     await searchField.fill('nonexistenttrack123'); // Fill with a term that shouldn't match anything
 
     await expect(trackListElement).toHaveCount(1); // Ensure no results are shown
-    const noResulTest = await trackListElement.innerText()
+    const noResulTest = (await trackListElement.innerText()).trim()
     expect(noResulTest).toBe('Not found')
 
     await context.close();
